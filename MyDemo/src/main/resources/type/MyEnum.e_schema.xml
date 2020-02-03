@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="MyEnum" package="cn.sunline.edsp.busi.MyDemo.type" longname="枚举类型示例" classgen="normal" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <description><![CDATA[枚举类型示例]]></description>
+    <restrictionType id="E_ISPAID" longname="是否支付工资" base="MyType.U_PAYSTATE">
+        <enumeration id="state_0" value="0" longname="未支付"/>
+        <enumeration id="state_1" value="1" longname="已支付"/>
+    </restrictionType>
+</schema>

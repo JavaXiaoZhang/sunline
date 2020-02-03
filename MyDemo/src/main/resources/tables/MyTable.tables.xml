@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="MyTable" package="cn.sunline.edsp.busi.MyDemo.tables" longname="表文件示例" classgen="normal" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <description><![CDATA[表文件示例]]></description>
+    <table id="t_demo" name="t_demo" longname="表结构示例" virtual="false" extension="KSysCommFieldTable.tsp_comm_filed_system" abstract="false">
+        <fields>
+            <field id="userno" longname="职工号" type="MyType.U_USERNO" ref="MyDict.DemoDict.userno" primarykey="false" final="false" nullable="true" identity="false" allowSubType="true"/>
+            <field id="salary" longname="薪资" type="MyType.U_SALARY" ref="MyDict.DemoDict.salary" primarykey="false" final="false" nullable="true" identity="false" allowSubType="true"/>
+            <field id="pay_day" longname="发薪日期" type="MyType.U_PAYDAY" ref="MyDict.DemoDict.pay_day" primarykey="false" final="false" nullable="true" identity="false" allowSubType="true"/>
+            <field id="pay_state" longname="是否发薪" type="MyType.U_PAYSTATE" ref="MyDict.DemoDict.pay_state" primarykey="false" final="false" nullable="true" identity="false" allowSubType="true"/>
+        </fields>
+        <ddls/>
+    </table>
+</schema>
