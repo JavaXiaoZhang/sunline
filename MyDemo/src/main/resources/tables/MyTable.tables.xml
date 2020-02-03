@@ -9,5 +9,13 @@
             <field id="pay_state" longname="是否发薪" type="MyType.U_PAYSTATE" ref="MyDict.DemoDict.pay_state" primarykey="false" final="false" nullable="true" identity="false" allowSubType="true"/>
         </fields>
         <ddls/>
+        <odbindexes>
+            <index id="odb1" type="unique" fields="userno" operate="selectOne deleteOne updateOne" longname="odb索引示例"/>
+        </odbindexes>
+        <indexes>
+            <index id="db1" type="unique" fields="userno system_code">
+                <ddls/>
+            </index>
+        </indexes>
     </table>
 </schema>

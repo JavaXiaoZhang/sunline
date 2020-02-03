@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<flowtran xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="MyDemoTran" longname="交易流程示例" kind="BaseEnumType.E_JIAOYILX" package="cn.sunline.edsp.busi.MyDemo.trans" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <interface package="cn.sunline.edsp.busi.MyDemo.trans.intf">
+        <input packMode="true">
+            <field id="userno" type="MyType.U_USERNO" required="false" multi="false" array="false" longname="职工号" ref="MyDict.DemoDict.userno"/>
+            <field id="salary" type="MyType.U_SALARY" required="false" multi="false" array="false" longname="薪资" ref="MyDict.DemoDict.salary"/>
+            <field id="pay_day" type="MyType.U_PAYDAY" required="false" multi="false" array="false" longname="发薪日期" ref="MyDict.DemoDict.pay_day"/>
+            <field id="pay_state" type="MyType.U_PAYSTATE" required="false" multi="false" array="false" longname="是否发薪" ref="MyDict.DemoDict.pay_state"/>
+            <field id="system_code" type="KBaseType.U_LEIXIN10" required="true" default="''" multi="false" array="false" longname="系统标识号" ref="KsDict.CommDict.system_code"/>
+        </input>
+        <output asParm="true" packMode="true"/>
+        <property packMode="true"/>
+        <printer packMode="true"/>
+    </interface>
+    <flow>
+        <service serviceName="MyService.DemoInsert" id="insert" longname="插入示例" desc="插入示例">
+            <in_mappings by_interface="true">
+                <mapping src="pay_day" dest="field.pay_day" by_interface="true" on_top="true"/>
+                <mapping src="pay_state" dest="field.pay_state" by_interface="true" on_top="true"/>
+                <mapping src="salary" dest="field.salary" by_interface="true" on_top="true"/>
+                <mapping src="system_code" dest="field.system_code" by_interface="true" on_top="true"/>
+                <mapping src="userno" dest="field.userno" by_interface="true" on_top="true"/>
+            </in_mappings>
+            <out_mappings by_interface="true"/>
+        </service>
+        <service serviceName="MyService.DemoUpdate" id="update" longname="更新示例" desc="更新示例">
+            <in_mappings by_interface="true">
+                <mapping src="salary" dest="salary" by_interface="true" on_top="true"/>
+                <mapping src="userno" dest="userno" by_interface="true" on_top="true"/>
+            </in_mappings>
+            <out_mappings by_interface="true"/>
+        </service>
+        <service serviceName="MyService.DemoSelect" id="select" longname="查询示例" desc="查询示例">
+            <in_mappings by_interface="true">
+                <mapping src="userno" dest="userno" by_interface="true" on_top="true"/>
+            </in_mappings>
+            <out_mappings by_interface="true"/>
+        </service>
+    </flow>
+    <outMapping/>
+    <propertyToPrinterMapping/>
+    <outToPrinterMapping/>
+</flowtran>

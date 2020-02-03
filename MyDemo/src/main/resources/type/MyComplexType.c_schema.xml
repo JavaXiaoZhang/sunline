@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="MyComplexType" package="cn.sunline.edsp.busi.MyDemo.type" longname="复合类型示例" classgen="normal" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <description><![CDATA[复合类型示例]]></description>
+    <complexType id="MyComplexInfo" longname="复合类型示例" dict="false" abstract="false" introduct="false">
+        <element id="userno" longname="职工号" type="MyType.U_USERNO" ref="MyDict.DemoDict.userno" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="salary" longname="薪资" type="MyType.U_SALARY" ref="MyDict.DemoDict.salary" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="pay_day" longname="发薪日期" type="MyType.U_PAYDAY" ref="MyDict.DemoDict.pay_day" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="pay_state" longname="是否发薪" type="MyType.U_PAYSTATE" ref="MyDict.DemoDict.pay_state" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="system_code" longname="系统标识号" type="KBaseType.U_LEIXIN10" ref="KsDict.CommDict.system_code" required="true" default="''" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+    </complexType>
+</schema>

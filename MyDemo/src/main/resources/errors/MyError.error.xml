@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<errorConf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="MyError" longname="错误码示例" package="cn.sunline.edsp.busi.MyDemo.errors" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <description><![CDATA[错误码示例]]></description>
+    <errors id="ErrorDemo" longname="错误码示例">
+        <description><![CDATA[错误码示例]]></description>
+        <error id="E0001" type="error" message="数据不存在"/>
+        <error id="E0002" type="error" message="查询条件${userno}不能为空">
+            <parameter id="userno" type="MyType.U_USERNO"/>
+        </error>
+        <error id="E0003" type="error" message="${date}日期格式不正确">
+            <parameter id="date" type="MyType.U_PAYDAY"/>
+        </error>
+    </errors>
+</errorConf>

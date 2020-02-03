@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	id="MyType" package="cn.sunline.edsp.busi.MyDemo.type"
-	longname="限制类型示例" classgen="normal"
-	xsi:noNamespaceSchemaLocation="ltts-model.xsd">
-	<description><![CDATA[限制类型示例]]></description>
-	<restrictionType id="U_USERNO" longname="职工号"
-		base="long" maxLength="64" isUnsigned="true" />
-	<restrictionType id="U_PAYDAY" longname="发薪日"
-		base="dateString" maxLength="8" />
-	<restrictionType id="U_SALARY" longname="薪资"
-		base="decimal" maxLength="10" fractionDigits="2" />
-	<restrictionType id="U_PAYSTATE" longname="支付状态"
-		base="string" maxLength="1" />
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="MyType" package="cn.sunline.edsp.busi.MyDemo.type" longname="限制类型示例" classgen="normal" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <description><![CDATA[限制类型示例]]></description>
+    <restrictionType id="U_USERNO" longname="职工号" base="long" maxLength="64" isUnsigned="true"/>
+    <restrictionType id="U_PAYDAY" longname="发薪日" base="dateString" maxLength="8"/>
+    <restrictionType id="U_SALARY" longname="薪资" base="decimal" maxLength="10" fractionDigits="2"/>
+    <restrictionType id="U_PAYSTATE" longname="支付状态" base="string" maxLength="1"/>
 </schema>

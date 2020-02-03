@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<serviceType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="MyService" kind="business" longname="服务类型示例" package="cn.sunline.edsp.busi.MyDemo.servicetype" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <description><![CDATA[服务类型示例]]></description>
+    <service id="DemoInsert" name="insertDemo" longname="插入示例">
+        <interface>
+            <input packMode="true">
+                <field id="field" type="MyComplexType.MyComplexInfo" required="false" multi="false" array="false" longname="插入参数"/>
+            </input>
+            <output asParm="false" packMode="true"/>
+            <property packMode="false"/>
+            <printer packMode="true"/>
+        </interface>
+    </service>
+    <service id="DemoUpdate" name="updateDemo" longname="更新示例">
+        <interface>
+            <input packMode="true">
+                <field id="userno" type="MyType.U_USERNO" required="false" multi="false" array="false" longname="职工号" ref="MyDict.DemoDict.userno"/>
+                <field id="salary" type="MyType.U_SALARY" required="false" multi="false" array="false" longname="薪资" ref="MyDict.DemoDict.salary"/>
+            </input>
+            <output asParm="false" packMode="true"/>
+            <property packMode="false"/>
+            <printer packMode="true"/>
+        </interface>
+    </service>
+    <service id="DemoSelect" name="selectDemo" longname="查询示例">
+        <interface>
+            <input packMode="true">
+                <field id="userno" type="MyType.U_USERNO" required="false" multi="false" array="false" longname="职工号" ref="MyDict.DemoDict.userno"/>
+            </input>
+            <output asParm="false" packMode="true">
+                <field id="field" type="MyComplexType.MyComplexInfo" required="false" multi="false" array="false" longname="输出参数"/>
+            </output>
+            <property packMode="false"/>
+            <printer packMode="true"/>
+        </interface>
+    </service>
+</serviceType>
